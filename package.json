@@ -1,0 +1,22 @@
+{
+  "name": "ui-lib",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "webpack --env mode=development",
+    "build": "webpack --env mode=production",
+    "start": "webpack serve"
+  },
+  "author": "Vadim Medvedev <vadim130809@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "webpack-dev-server": "^4.15.1"
+  }
+}
