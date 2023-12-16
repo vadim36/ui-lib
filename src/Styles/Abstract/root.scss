@@ -1,0 +1,26 @@
+$positions: top, right, bottom, left;
+
+:root {
+  --primary-color: 0;
+  --accent-color: 220;
+  
+  --primary-saturation: 50%;
+  
+  --primary-luminance: 100%;
+  --secondary-lumincance: 0%;
+  --accent-luminance: 35%;
+}
+
+$primary-color: hsl(
+  var(--primary-color),
+  var(--primary-saturation),
+  var(--primary-luminance)
+);
+
+$secondary-color: hsl(
+  var(--primary-color),
+  var(--primary-saturation),
+  var(--secondary-lumincance)
+);
+
+$primary-border: 1px solid $secondary-color;

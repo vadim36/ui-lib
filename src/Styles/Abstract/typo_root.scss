@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$fontSizeWeight:
+  1 var(--l-font-weight) var(--xl-font-size),
+  2 var(--l-font-weight) var(--l-font-size),
+  3 var(--m-font-weight) var(--xm-font-size),
+  4 var(--m-font-weight) var(--m-font-size),
+  5 var(--s-font-weight) var(--s-font-size),
+  6 var(--s-font-weight) var(--xs-font-size);
+
+$textAligns: left, center, right;
+
+:root {
+  --reg-font-family: 'Roboto', sans-serif;
+
+  --l-font-weight: 700;
+  --m-font-weight: 500;
+  --s-font-weight: 400;
+
+  --xl-font-size: clamp(3.5rem, 10vw, 7.5rem);
+  --l-font-size: clamp(2.75rem, 10vw, 5.5rem);
+  --xm-font-size: clamp(2.25rem, 10vw, 4.5rem);
+  --m-font-size: clamp(2rem, 5vw, 3.75rem);
+  --s-font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  --xs-font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}

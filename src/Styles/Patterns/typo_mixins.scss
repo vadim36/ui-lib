@@ -1,0 +1,14 @@
+@use '../Abstract/typo_root.scss' as *;
+
+@mixin header($type) {
+  font-family: var(--reg-font-family);
+
+  @each $index, $weight, $size in $fontSizeWeight {
+    @if ($type == $index) {
+      font-weight: $weight;
+      font-size: $size;
+    }
+  }
+
+  letter-spacing: .15rem;
+}

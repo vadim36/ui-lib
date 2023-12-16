@@ -1,0 +1,21 @@
+@use '../Patterns/typo_mixins.scss' as patterns;
+@use '../Abstract/typo_root.scss' as typo_root;
+@use '../Abstract/root.scss' as root;
+
+@for $index from 1 through 6 {
+ [data-h#{$index}] {
+  @include patterns.header($index);
+ }
+}
+
+@each $align in typo_root.$textAligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+@each $position in root.$positions {
+  .text-divider-#{$position} {
+    border-#{$position}: root.$primary-border;
+  }
+}
