@@ -6,13 +6,20 @@ module.exports = (env) => {
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: '[name].[contenthash].js',
+      filename: 'index.js',
       clean: true
     },
-    devServer: {
-      port: 5000,
-      open: true,
-      hot: true
-    }    
+    module: {
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            'style-loader',
+            'css-loader',
+            'sass-loader'
+          ]
+        }
+      ]
+    }
   }
 }
