@@ -3,7 +3,7 @@
 @use '../Abstract/root.scss' as root;
 
 @for $index from 1 through 6 {
- [data-h#{$index}] {
+ [role="heading-#{$index}"] {
   all: initial;
   @include patterns.header($index);
  }
