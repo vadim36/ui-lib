@@ -2,9 +2,15 @@
 @use '../Abstract/typo_root.scss' as typo_root;
 @use '../Abstract/root.scss' as root;
 
+* {
+  font-family: typo_root.$reg-font-family;
+}
+
 @for $index from 1 through 6 {
- [role="heading-#{$index}"] {
+ [role="heading-#{$index}"],
+ .heading-#{index} {
   all: initial;
+  font-family: inherit;
   @include patterns.header($index);
  }
 }
