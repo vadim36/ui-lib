@@ -1,7 +1,7 @@
 @use '../Abstract/typo_root.scss' as *;
 
 @mixin header($type) {
-  font-family: var(--reg-font-family);
+  font-family: $reg-font-family;
 
   @each $index, $weight, $size in $fontSizeWeight {
     @if ($type == $index) {

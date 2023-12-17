@@ -4,6 +4,7 @@
 
 @for $index from 1 through 6 {
  [data-h#{$index}] {
+  all: initial;
   @include patterns.header($index);
  }
 }
@@ -17,5 +18,9 @@
 @each $position in root.$positions {
   .text-divider-#{$position} {
     border-#{$position}: root.$primary-border;
+
+    @if ($position == left or right) {
+      padding: 0 calc(typo_root.$xm-font-size * .1);
+    }
   }
 }
