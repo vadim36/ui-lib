@@ -30,3 +30,52 @@
     }
   }
 }
+
+.text {
+  font-size: typo_root.$s-font-size;
+}
+
+[role="bold"],
+.bold {
+  font-weight: typo_root.$m-font-weight;
+}
+
+[role="strong"],
+.strong {
+  font-weight: typo_root.$l-font-weight;
+}
+
+[role="italic"],
+.italic {
+  font-style: italic;
+}
+
+[role="mark"],
+.mark {
+  background: root.$secondary-accent-color;
+  padding: 0 calc(typo_root.$m-font-size * .1);
+}
+
+[role="small-text"],
+.small-text {
+  font-size: typo_root.$xs-font-size;
+}
+
+[role="deleted-text"],
+.deleted-text {
+  text-decoration: line-through;
+}
+
+[role="subscripted-text"],
+.subscripted-text {
+  font-size: typo_root.$xs-font-size;
+  font-weight: typo_root.$s-font-weight;
+  vertical-align: sub;
+}
+
+[role="supscripted-text"],
+.supscripted-text {
+  font-size: typo_root.$xs-font-size;
+  font-weight: typo_root.$s-font-weight;
+  vertical-align: top;
+}

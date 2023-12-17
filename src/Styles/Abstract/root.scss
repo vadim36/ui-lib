@@ -1,12 +1,15 @@
 :root {
   --primary-color: 0;
   --accent-color: 220;
+  --secondary-accent-color: 45;
   
   --primary-saturation: 50%;
+  --secondary-saturation: 100%;
   
   --primary-luminance: 100%;
   --secondary-lumincance: 0%;
   --accent-luminance: 35%;
+  --secondary-accent-luminance: 50%;
 }
 
 $primary-color: hsl(
@@ -19,6 +22,18 @@ $secondary-color: hsl(
   var(--primary-color),
   var(--primary-saturation),
   var(--secondary-lumincance)
+);
+
+$accent-color: hsl(
+  var(--accent-color),
+  var(--primary-saturation),
+  var(--accent-luminance)
+);
+
+$secondary-accent-color: hsl(
+  var(--secondary-accent-color),
+  var(--secondary-saturation),
+  var(--secondary-accent-luminance)
 );
 
 $primary-border: 1px solid $secondary-color;
