@@ -1,6 +1,6 @@
-@use '../Patterns/typo_mixins.scss' as patterns;
-@use '../Abstract/typo_root.scss' as typo_root;
-@use '../Abstract/root.scss' as root;
+@use '../../Patterns/typo_mixins.scss' as patterns;
+@use '../../Abstract/typo_root.scss' as typo_root;
+@use '../../Abstract/root.scss' as root;
 
 * {
   font-family: typo_root.$reg-font-family;
@@ -52,7 +52,7 @@
 
 [role="mark"],
 .mark {
-  background: root.$secondary-accent-color;
+  background: hsl(#{root.$secondary-accent-color});
   padding: 0 calc(typo_root.$m-font-size * .1);
 }
 
@@ -78,4 +78,24 @@
   font-size: typo_root.$xs-font-size;
   font-weight: typo_root.$s-font-weight;
   vertical-align: top;
+}
+
+[role="quote"],
+.quote-text {
+  all: unset;
+  font-size: calc(typo_root.$s-font-size * .75);
+  background: hsl(#{root.$accent-color}, 45%);
+  display: block;
+  padding: 
+    calc(typo_root.$s-font-size * .25)
+    calc(typo_root.$s-font-size * .5);
+
+  &::before {
+    content: '«';
+  }
+
+  &::after {
+    content: '»' ' — ' attr(aria-author);
+    overflow-wrap: break-word;
+  }
 }

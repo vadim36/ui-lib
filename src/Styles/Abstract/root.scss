@@ -12,30 +12,26 @@
   --secondary-accent-luminance: 50%;
 }
 
-$primary-color: hsl(
+$primary-color: 
   var(--primary-color),
   var(--primary-saturation),
-  var(--primary-luminance)
-);
+  var(--primary-luminance);
 
-$secondary-color: hsl(
+$secondary-color:
   var(--primary-color),
   var(--primary-saturation),
-  var(--secondary-lumincance)
-);
+  var(--secondary-lumincance);
 
-$accent-color: hsl(
+$accent-color:
   var(--accent-color),
   var(--primary-saturation),
-  var(--accent-luminance)
-);
+  var(--accent-luminance);
 
-$secondary-accent-color: hsl(
+$secondary-accent-color:
   var(--secondary-accent-color),
   var(--secondary-saturation),
-  var(--secondary-accent-luminance)
-);
+  var(--secondary-accent-luminance);
 
-$primary-border: 1px solid $secondary-color;
+$primary-border: 1px solid hsl(#{$secondary-color});
 
 $positions: top, right, bottom, left;

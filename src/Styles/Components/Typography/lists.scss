@@ -1,0 +1,24 @@
+@use '../../Abstract/typo_root.scss' as typo_root;
+
+[role="list"],
+.list {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  counter-reset: list;
+
+  &:first-child::before {
+    content: attr(aria-label)':';
+    font-size: calc(typo_root.$m-font-size * .8);
+    cursor: text;
+  }
+
+  &[type="char"] [role="list-item"]::before {
+    content: circled-alpha;
+  }
+
+  &[type="num"] [role="list-item"]::before {
+    counter-increment: list;
+    content: counter(list)'. ';
+  }
+}
