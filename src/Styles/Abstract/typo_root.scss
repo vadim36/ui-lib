@@ -22,3 +22,12 @@ $fontSizeWeight:
   6 $s-font-weight $xs-font-size;
 
 $textAligns: left, center, right;
+
+$styleList:
+  "num" numeric,
+  "char" lower-alpha,
+  "rom-num" upper-roman;
+
+$listMarkerDividers:
+  "dot" '. ',
+  "bracket" ') ';

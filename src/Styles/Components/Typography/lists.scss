@@ -7,18 +7,27 @@
   flex-direction: column;
   counter-reset: list;
 
-  &:first-child::before {
-    content: attr(aria-label)':';
+  //TODO:fix this
+  /*&[aria-label]::before {
+    content: attr(aria-label)var(--labelPostFix);
     font-size: calc(typo_root.$m-font-size * .8);
     cursor: text;
+  }*/
+
+  @each $typeList, $typeMarker in typo_root.$styleList {
+    &[type*=#{$typeList}] {
+      --marker: #{$typeMarker};
+    }
   }
 
-  &[type="char"] [role="list-item"]::before {
-    content: circled-alpha;
+  @each $styleDivider, $divider in typo_root.$listMarkerDividers {
+   &[type*=#{$styleDivider}] {
+      --divider: "#{$divider}";
+    }
   }
 
-  &[type="num"] [role="list-item"]::before {
+  [role="list-item"]::before {
     counter-increment: list;
-    content: counter(list)'. ';
+    content: counters(list, '.', var(--marker))var(--divider);
   }
 }
