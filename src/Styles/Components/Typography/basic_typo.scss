@@ -4,6 +4,7 @@
 
 * {
   font-family: typo_root.$reg-font-family;
+  color: hsl(#{root.$secondary-color});
 }
 
 @for $index from 1 through 6 {
