@@ -1,0 +1,7 @@
+@use '../../Abstract/root.scss' as *;
+
+@each $colorType, $color in $colors {
+  .bg-#{$colorType} {
+    background-color: hsl(#{$color});
+  }
+}

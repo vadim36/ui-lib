@@ -1,36 +1,56 @@
 :root {
-  --primary-color: 0;
-  --accent-color: 220;
-  --secondary-accent-color: 45;
+  --h-primary: 0;
+  --h-accent: 220;
+  --h-secondary-accent: 45;
+  --h-success: 120;
   
-  --primary-saturation: 50%;
-  --secondary-saturation: 100%;
-  
-  --primary-luminance: 100%;
-  --secondary-lumincance: 0%;
-  --accent-luminance: 35%;
-  --secondary-accent-luminance: 50%;
+  --s-50: 50%;
+  --s-75: 75%;
+  --s-100: 100%;
+
+  --l-0: 0%;
+  --l-50: 50%;
+  --l-55: 55%;
+  --l-100: 100%;
 }
 
 $primary-color: 
-  var(--primary-color),
-  var(--primary-saturation),
-  var(--primary-luminance);
+  var(--h-primary),
+  var(--s-100),
+  var(--l-100);
 
 $secondary-color:
-  var(--primary-color),
-  var(--primary-saturation),
-  var(--secondary-lumincance);
+  var(--h-primary),
+  var(--s-100),
+  var(--l-0);
 
 $accent-color:
-  var(--accent-color),
-  var(--primary-saturation),
-  var(--accent-luminance);
+  var(--h-accent),
+  var(--s-50),
+  var(--l-50);
 
 $secondary-accent-color:
-  var(--secondary-accent-color),
-  var(--secondary-saturation),
-  var(--secondary-accent-luminance);
+  var(--h-secondary-accent),
+  var(--l-100),
+  var(--s-50);
+
+$success-color:
+  var(--h-success),
+  var(--s-50),
+  var(--l-50);
+
+$danger-color:
+  var(--h-primary),
+  var(--s-75),
+  var(--l-55);
+
+$colors: 
+  'primary' $primary-color,
+  'secondary' $secondary-color,
+  'accent' $accent-color,
+  'secondary-accent' $secondary-accent-color,
+  'success' $success-color,
+  'danger' $danger-color;
 
 $primary-border: 1px solid hsl(#{$secondary-color});
 
