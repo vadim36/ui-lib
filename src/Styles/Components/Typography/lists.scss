@@ -7,12 +7,11 @@
   flex-direction: column;
   counter-reset: list;
 
-  //TODO:fix this
-  /*&[aria-label]::before {
-    content: attr(aria-label)var(--labelPostFix);
+  &[aria-label]:not([aria-label=""])::before {
+    content: attr(aria-label)': ';
     font-size: calc(typo_root.$m-font-size * .8);
     cursor: text;
-  }*/
+  }
 
   @each $typeList, $typeMarker in typo_root.$styleList {
     &[type*=#{$typeList}] {
