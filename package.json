@@ -1,6 +1,6 @@
 {
   "name": "ui-lib",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "webpack --mode development",
@@ -22,6 +22,7 @@
     "dist"
   ],
   "devDependencies": {
+    "node-sass": "^9.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack-dev-server": "^4.15.1"

@@ -55,3 +55,17 @@ $colors:
 $primary-border: 1px solid hsl(#{$secondary-color});
 
 $positions: top, right, bottom, left;
+
+$abstract-points-1:
+  '0' 0,
+  '25' .25,
+  '50' .50,
+  '75' .75,
+  '100' 1;
+
+$abstract-points-2:
+  '1' 1,
+  '2' 2,
+  '3' 3,
+  '4' 4,
+  '5' 5;

@@ -1,0 +1,82 @@
+@use '../../Abstract/root.scss' as *;
+
+//?Border
+.border {
+  border: $primary-border;
+}
+
+//?Border Radius
+@each $pointType, $point in $abstract-points-1 {
+  .br-#{$pointType} {
+    border-radius: calc(#{$point} * 10px);
+  }
+}
+
+//?Border Position
+@each $position in $positions {
+  .border-#{$position} {
+    border-#{$position}: $primary-border;
+  }
+
+  .border-#{$position}.border {
+    border-#{$position}: 0; 
+  }
+}
+
+//?Border Size
+@each $pointType, $point in $abstract-points-2 {
+  .border-#{$pointType}.border {
+    border: #{$point}px solid hsl(#{$secondary-color});
+  }
+}
+
+//?Border Position + Size
+@each $pointType, $point in $abstract-points-2 {
+  @each $position in $positions {
+    .border-#{$position}.border-#{$pointType} {
+      border-#{$position}: #{$point}px solid hsl(#{$secondary-color});
+    }
+
+    .border-#{$position}.border-#{$pointType}.border {
+      border-#{$position}: 0;
+    }
+  }
+}
+
+//?Border Colors
+@each $colorType, $color in $colors { 
+  .border-#{$colorType}.border {
+    border: 1px solid hsl(#{$color});
+  } 
+
+  //?Border Colors + Positions
+  @each $position in $positions {
+    .border-#{$colorType}.border-#{$position} {
+      border-#{$position}: 1px solid hsl(#{$color});
+    }
+
+    .border-#{$colorType}.border-#{$position}.border {
+      border-#{$position}: 0;
+    }
+  }
+
+  //?Border Colors + Size
+  @each $pointType, $point in $abstract-points-2 {
+    .border-#{$colorType}.border-#{$pointType}.border {
+      border: #{$point}px solid hsl(#{$color});
+    }
+  } 
+  
+   //?Border Colors + Size + Position
+   @each $pointType, $point in $abstract-points-2 {
+    @each $position in $positions {
+      .border-#{$colorType}.border-#{$pointType}.border-#{$position} {
+        border-#{$position}: #{$point}px solid hsl(#{$color});
+      }
+
+      .border-#{$colorType}.border-#{$pointType}.border-#{$position}.border {
+        border-#{$position}: 0;
+      }
+    }
+  }
+}
