@@ -1,7 +1,7 @@
 @use '../../Abstract/root.scss' as *;
 
-@each $displayType, $dispay in $displays {
+@each $displayType in $displays {
   .d-#{$displayType} {
-    display: #{$dispay};
+    display: #{$displayType};
   }
 }

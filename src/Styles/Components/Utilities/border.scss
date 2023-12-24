@@ -24,20 +24,20 @@
 }
 
 //?Border Size
-@each $pointType, $point in $abstract-points-2 {
-  .border-#{$pointType}.border {
+@each $point in $abstract-points-2 {
+  .border-#{$point}.border {
     border: #{$point}px solid hsl(#{$secondary-color});
   }
 }
 
 //?Border Position + Size
-@each $pointType, $point in $abstract-points-2 {
+@each $point in $abstract-points-2 {
   @each $position in $positions {
-    .border-#{$position}.border-#{$pointType} {
+    .border-#{$position}.border-#{$point} {
       border-#{$position}: #{$point}px solid hsl(#{$secondary-color});
     }
 
-    .border-#{$position}.border-#{$pointType}.border {
+    .border-#{$position}.border-#{$point}.border {
       border-#{$position}: 0;
     }
   }
@@ -61,20 +61,20 @@
   }
 
   //?Border Colors + Size
-  @each $pointType, $point in $abstract-points-2 {
-    .border-#{$colorType}.border-#{$pointType}.border {
+  @each $point in $abstract-points-2 {
+    .border-#{$colorType}.border-#{$point}.border {
       border: #{$point}px solid hsl(#{$color});
     }
   } 
   
    //?Border Colors + Size + Position
-   @each $pointType, $point in $abstract-points-2 {
+   @each $point in $abstract-points-2 {
     @each $position in $positions {
-      .border-#{$colorType}.border-#{$pointType}.border-#{$position} {
+      .border-#{$colorType}.border-#{$point}.border-#{$position} {
         border-#{$position}: #{$point}px solid hsl(#{$color});
       }
 
-      .border-#{$colorType}.border-#{$pointType}.border-#{$position}.border {
+      .border-#{$colorType}.border-#{$point}.border-#{$position}.border {
         border-#{$position}: 0;
       }
     }

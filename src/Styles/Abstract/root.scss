@@ -55,6 +55,9 @@ $colors:
 $primary-border: 1px solid hsl(#{$secondary-color});
 
 $positions: top, right, bottom, left;
+$flex-positions: 
+  flex-start, flex-end, center, 
+  space-around, space-between, space-evenly;
 
 $abstract-points-1:
   '0' 0,
@@ -63,21 +66,11 @@ $abstract-points-1:
   '75' .75,
   '100' 1;
 
-$abstract-points-2:
-  '1' 1,
-  '2' 2,
-  '3' 3,
-  '4' 4,
-  '5' 5;
+$abstract-points-2: 1, 2, 3, 4, 5;
 
 $displays: 
-  'none' none,
-  'inline' inline,
-  'block' block,
-  'inline-block' inline-block,
-  'flex' flex,
-  'inline-flex' flex,
-  'grid' grid;
+  none, inline, block,
+  inline-block, flex, inline-flex, grid;
 
 $flex-dir:
   'rw' row,
