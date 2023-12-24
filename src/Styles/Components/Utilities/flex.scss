@@ -5,3 +5,19 @@
     flex-direction: #{$flexDir};
   }
 }
+
+$flexAligns: 'justify-content', 'align-items', 'align-self';
+
+@each $flexPos in $flex-positions {
+  @each $flexAlign in $flexAligns {
+    .#{$flexAlign}-#{$flexPos} {
+      #{$flexAlign}: $flexPos;
+    }
+  }
+}
+
+@each $point in $abstract-points-2 {
+  .flex-grow-#{$point} {
+    flex-grow: $point;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../../Abstract/root.scss' as *;
+
+.underline {
+  text-decoration: $primary-underline;
+  text-decoration-color: hsl(#{$accent-color});
+}
+
+@each $point in $abstract-points-1 {
+  .underline-#{$point}.underline {
+    text-underline-offset: #{$point}px;
+  }
+}

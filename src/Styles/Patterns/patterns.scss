@@ -1,0 +1,9 @@
+%interactive {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  &:active {
+    top: 1px;
+  }
+}

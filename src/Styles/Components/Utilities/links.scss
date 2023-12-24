@@ -1,0 +1,32 @@
+@use '../../Abstract/root.scss' as *;
+@use '../../Patterns/patterns.scss' as *;
+@use 'underline' as *;
+
+//!Hover Opacity, underline, underlinve offset, underline opacity, color
+
+.link,
+[role="link"] {
+  color: hsl(#{$accent-color});
+  @extend %interactive;
+  @extend .underline;
+}
+
+@each $colorType, $color in $colors {
+  .link-#{$colorType}.link,
+  .link-#{$colorType}[role="link"] {
+    color: hsl(#{$color});
+    text-decoration-color: hsl(#{$color});
+  }
+}
+
+//TODO: FIX THIS
+@each $pointType, $point in $abstract-points-1 {
+  @if ($pointType != '0') {
+    .link-hover-#{$point}.link:hover,
+    .link-hover-#{$point}.link:active,
+    .link-hover-#{$point}[role="link"]:hover,
+    .link-hover-#{$point}[role="link"]:active {
+      opacity: calc($point * 100%);
+    }
+  }
+}

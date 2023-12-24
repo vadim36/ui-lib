@@ -53,6 +53,7 @@ $colors:
   'danger' $danger-color;
 
 $primary-border: 1px solid hsl(#{$secondary-color});
+$primary-underline: underline 1px solid;
 
 $positions: top, right, bottom, left;
 $flex-positions: 
