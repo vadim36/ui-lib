@@ -1,18 +1,19 @@
 @use '../../Patterns/typo_mixins.scss' as patterns;
 @use '../../Abstract/typo_root.scss' as typo_root;
 @use '../../Abstract/root.scss' as root;
+@use '../Utilities/utils.scss' as utils;
 
 * {
   font-family: typo_root.$reg-font-family;
-  color: hsl(#{root.$secondary-color});
+  @extend .text-secondary;
 }
 
 @for $index from 1 through 6 {
  [role="heading-#{$index}"],
  .heading-#{index} {
-  all: initial;
-  font-family: inherit;
-  @include patterns.header($index);
+    all: initial;
+    font-family: inherit;
+    @include patterns.header($index);
  }
 }
 
@@ -86,7 +87,7 @@
   all: unset;
   font-size: calc(typo_root.$s-font-size * .75);
   background: hsl(#{root.$accent-color}, 45%);
-  display: block;
+  @extend .d-block;
   padding: 
     calc(typo_root.$s-font-size * .25)
     calc(typo_root.$s-font-size * .5);

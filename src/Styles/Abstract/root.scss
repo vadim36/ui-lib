@@ -69,3 +69,18 @@ $abstract-points-2:
   '3' 3,
   '4' 4,
   '5' 5;
+
+$displays: 
+  'none' none,
+  'inline' inline,
+  'block' block,
+  'inline-block' inline-block,
+  'flex' flex,
+  'inline-flex' flex,
+  'grid' grid;
+
+$flex-dir:
+  'rw' row,
+  'cl' column,
+  'rw-rs' row-reverse,
+  'cl-rs' column-reverse;

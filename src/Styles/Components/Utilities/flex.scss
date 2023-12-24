@@ -1,0 +1,7 @@
+@use '../../Abstract/root.scss' as *;
+
+@each $flexDirType, $flexDir in $flex-dir {
+  .flex-#{$flexDirType} {
+    flex-direction: #{$flexDir};
+  }
+}

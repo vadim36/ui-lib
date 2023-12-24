@@ -1,0 +1,7 @@
+@use '../../Abstract/root.scss' as *;
+
+@each $displayType, $dispay in $displays {
+  .d-#{$displayType} {
+    display: #{$dispay};
+  }
+}

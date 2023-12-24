@@ -1,9 +1,10 @@
 @use '../../Abstract/typo_root.scss' as typo_root;
+@use '../Utilities/utils.scss' as utils;
 
 [role="list"],
 .list {
   all: unset;
-  display: flex;
+  @extend .d-flex;
   flex-direction: column;
   counter-reset: list;
 
