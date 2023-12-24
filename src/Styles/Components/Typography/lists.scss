@@ -5,7 +5,7 @@
 .list {
   all: unset;
   @extend .d-flex;
-  flex-direction: column;
+  @extend .flex-cl;
   counter-reset: list;
 
   &[aria-label]:not([aria-label=""])::before {
